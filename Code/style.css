@@ -1,0 +1,45 @@
+body{
+    margin: 0 auto;
+}
+
+.header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.header-bild{
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid black;
+    padding: 200px 0px 200px 0px;
+}
+
+.bild-text-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bild{
+    box-shadow: 5px 5px 10px #bbbbbb;
+    padding: 50px;
+    margin: 20px 5px 20px 5px;
+    width: 30vw;
+}
+
+.text{
+    text-align: center;
+    box-shadow: 5px 5px 10px #bbbbbb;
+    padding: 50px;
+    margin: 20px 5px 20px 5px;
+    width: 40vw;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
