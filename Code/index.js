@@ -1,43 +1,31 @@
+// Speichere die ursprüngliche Reihenfolge der Elemente
+const originalOrder = Array.from(document.querySelectorAll('.bild-text-box')).map(box => box.innerHTML);
+
+// Funktion zum Wiederherstellen der ursprünglichen Reihenfolge
+function restoreOriginalOrder() {
+    const boxes = document.querySelectorAll('.bild-text-box');
+    boxes.forEach((box, index) => {
+        box.innerHTML = originalOrder[index];
+    });
+}
+
+// Funktion zum Behandeln der Media Query
 function handleMediaQuery(mediaQuery) {
+    const boxes = document.querySelectorAll('.bild-text-box');
     if (mediaQuery.matches) {
         // Media Query ist erfüllt
         console.log("Media Query ist erfüllt");
-        // Füge hier deinen JavaScript-Code ein, der innerhalb der Media Query ausgeführt werden soll
-
-        
-        // Wähle alle Elemente mit der Klasse .bild-text-box aus
-        const parentElements = document.querySelectorAll('.bild-text-box');
-
-        // Iteriere über jedes übergeordnete Element
-        parentElements.forEach(parentElement => {
-            // Wähle die Elemente innerhalb des aktuellen übergeordneten Elements aus
-            const textElement = parentElement.querySelector('.text');
-            const bildElement = parentElement.querySelector('.bild');
-
-            // Füge das Bild-Element vor dem Text-Element ein
-            parentElement.insertBefore(bildElement, textElement);
-        });
-        
-    } 
-    else {
-        // Media Query ist nicht erfüllt
-        console.log("Media Query ist nicht erfüllt");
-        // Füge hier deinen JavaScript-Code ein, um die Änderungen rückgängig zu machen
-
-        // Wähle alle Elemente mit der Klasse .bild-text-box aus
-        const parentElements = document.querySelectorAll('.bild-text-box');
-
-        // Iteriere über jedes übergeordnete Element
-        parentElements.forEach(parentElement => {
-            // Wähle die Elemente innerhalb des aktuellen übergeordneten Elements aus
-            const textElement = parentElement.querySelector('.text');
-            const bildElement = parentElement.querySelector('.bild');
-
-            if (textElement.compareDocumentPosition(bildElement) & Node.DOCUMENT_POSITION_FOLLOWING) {
-                // Füge das Text-Element vor dem Bild-Element ein
-                parentElement.insertBefore(textElement, bildElement);
+        boxes.forEach(box => {
+            const text = box.querySelector('.text');
+            const bild = box.querySelector('.bild');
+            if (bild.nextSibling !== text) {
+                box.insertBefore(bild, text);
             }
         });
+    } else {
+        // Media Query ist nicht erfüllt
+        console.log("Media Query ist nicht erfüllt");
+        restoreOriginalOrder();
     }
 }
 
