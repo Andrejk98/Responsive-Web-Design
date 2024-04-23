@@ -4,7 +4,6 @@ function handleMediaQuery(mediaQuery) {
         console.log("Media Query ist erfüllt");
         // Füge hier deinen JavaScript-Code ein, der innerhalb der Media Query ausgeführt werden soll
 
-        
         // Wähle alle Elemente mit der Klasse .bild-text-box aus
         const parentElements = document.querySelectorAll('.bild-text-box');
 
