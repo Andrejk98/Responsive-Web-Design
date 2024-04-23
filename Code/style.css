@@ -44,7 +44,7 @@ body{
     padding: 20px;
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 720px){
     
     .bild-text-box{
         display: block;
