@@ -28,6 +28,17 @@ body{
     align-items: center; /* Horizontal zentrierte Ausrichtung */
 }
 
+.text-box{
+    display: flex;
+    align-items: center; /* Horizontal zentrierte Ausrichtung */
+    justify-content: center;
+    width: 100vw;
+}
+
+.text-box > div{
+    width: 100vw;
+}
+
 .bild{
     box-shadow: 5px 5px 10px #bbbbbb;
     padding: 50px;
