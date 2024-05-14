@@ -32,7 +32,6 @@ body{
     display: flex;
     align-items: center; /* Horizontal zentrierte Ausrichtung */
     justify-content: center;
-    width: 100vw;
 }
 
 .text-box > div{
@@ -43,7 +42,7 @@ body{
     box-shadow: 5px 5px 10px #bbbbbb;
     padding: 50px;
     margin: 20px 5px 20px 5px;
-    width: 30vw;
+    width: 40vw;
 }
 
 .text{
@@ -51,7 +50,7 @@ body{
     box-shadow: 5px 5px 10px #bbbbbb;
     padding: 50px;
     margin: 20px 5px 20px 5px;
-    width: 40vw;
+    width: 30vw;
 }
 
 .footer{
