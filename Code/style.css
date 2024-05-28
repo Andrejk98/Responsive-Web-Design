@@ -28,6 +28,7 @@ body{
     display: flex;
     flex-direction: column; /* Die Elemente werden vertikal untereinander angezeigt */
     align-items: center; /* Horizontal zentrierte Ausrichtung */
+    width: 20vw;
 }
 
 .text-box{
