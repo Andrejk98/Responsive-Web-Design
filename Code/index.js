@@ -36,3 +36,5 @@ const mediaQuery = window.matchMedia("(max-width: 720px)");
 // um auf Änderungen der Media Query zu reagieren
 handleMediaQuery(mediaQuery);
 mediaQuery.addListener(handleMediaQuery);
+
+//Vorhernachher Slider
