@@ -28,6 +28,7 @@ body{
     display: flex;
     flex-direction: column; /* Die Elemente werden vertikal untereinander angezeigt */
     align-items: center; /* Horizontal zentrierte Ausrichtung */
+    margin: 0 auto;
 }
 
 .text-box{
@@ -47,12 +48,16 @@ body{
     width: 40vw;
 }
 
-.mittelbild{
+.mittelbildbox{
     display: flex;
     flex-direction: column; /* Die Elemente werden vertikal untereinander angezeigt */
     align-items: center; /* Horizontal zentrierte Ausrichtung */
     box-shadow: 5px 5px 10px #bbbbbb;
-    margin: 20px 5px 20px 5px;   
+    margin-top: 20px;  
+}
+
+.mittelbild{
+    max-width: 90vw;
 }
 
 .text{
@@ -121,7 +126,7 @@ h2{
         box-shadow: 3px 3px 8px black;
     }
 
-    .mittelbild{
+    .mittelbildbox{
         background-color: #e9e9e9;
         color: black;
         box-shadow: 5px 5px 10px black;
