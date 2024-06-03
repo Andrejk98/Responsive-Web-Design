@@ -38,3 +38,4 @@ handleMediaQuery(mediaQuery);
 mediaQuery.addListener(handleMediaQuery);
 
 // Code für Vorhernachher Slider
+$('.ba-slider').beforeAfter();

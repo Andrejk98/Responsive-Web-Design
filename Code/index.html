@@ -6,6 +6,9 @@
     <title>Tobis Wohnung</title>
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
+    <link type="text/css" href="before-after.css" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="before-after.js"></script>
 </head>
 <body>
     <!--
@@ -70,7 +73,15 @@
     <h2>Die Küche</h2>
 
     <div class="bild-text-box">
-        <img src="../Bilder/Tobis Küche.jpg" alt="Tobis Küche" class="bild">
+        <div class="bild">
+            <div class="ba-slider">
+                <img src="../Bilder/Tobis Küche.jpg">
+                <div class="resize">
+                    <img src="../Bilder/Tobis Alte Küche.png">
+                </div>
+                <span class="handle"></span>
+            </div>	
+        </div>
         <div class="text">
             Als mein Kumpel in die Wohnung einzog hatte diese keine Küche, weshalb er ein halbes Jahr mit einer provisorischen Küche zurechtkommen musste.
             Er fing an seine Küche selbst zu modellieren und letzendlich war es dann zeit die Küche zu bauen.
