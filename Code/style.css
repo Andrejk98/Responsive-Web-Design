@@ -134,14 +134,14 @@ h2{
 
 @font-face {
     font-family: 'EB Garamond';
-    src: url('../Schriftart/static/EBGaramond-Regular.ttf') format('ttf');
+    src: url('../Schriftart/static/EBGaramond-SemiBold.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'EB Garamond';
-    src: url('../Schriftart/static/EBGaramond-Bold.ttf') format('ttf');
+    src: url('../Schriftart/static/EBGaramond-ExtraBold.ttf') format('ttf');
     font-weight: bold;
     font-style: normal;
 }
