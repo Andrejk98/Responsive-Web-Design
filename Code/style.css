@@ -71,8 +71,8 @@ body{
     width: 30vw;
 }
 
-h2{
-    margin-left: 5vw;
+.text > h2{
+    text-align: left;
 }
 
 /* Bilder Karussell */
