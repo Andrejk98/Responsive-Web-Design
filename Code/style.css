@@ -75,6 +75,82 @@ h2{
     margin-left: 5vw;
 }
 
+/* Bilder Karussell */
+
+.slideshow-container {
+    max-width: 60vw;
+    position: relative;
+    margin: auto;
+    box-shadow: 5px 5px 10px #bbbbbb;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  img {
+    vertical-align: middle;
+  }
+  
+  /* Schaltflächen zum Wechseln */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #FF34B3;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: #00cb4c;
+  }
+  
+  /* Punkte */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #00cb4c;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #FF34B3;
+  }
+  
+  /* Fade-Effekt */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
 
 /*
 .footer{
@@ -130,6 +206,10 @@ h2{
         background-color: #696969;
         color: white;
         box-shadow: 5px 5px 10px black;
+    }
+    
+    .slideshow-container{
+        box-shadow: 3px 3px 8px black;
     }
 }
 
