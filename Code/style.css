@@ -110,24 +110,24 @@ h2{
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #080d3b;
+        background-color: #696969;
         color: white;
     }
 
     .text{
-        background-color: #232857;
+        background-color: #696969;
         color: white;
         box-shadow: 3px 3px 8px black;
     }
 
     .bild{
-        background-color: #232857;
+        background-color: #696969;
         color: white;
         box-shadow: 3px 3px 8px black;
     }
 
     .mittelbild{
-        background-color: #232857;
+        background-color: #696969;
         color: white;
         box-shadow: 5px 5px 10px black;
     }
