@@ -113,16 +113,42 @@ h1{
 
 .spieleabende-box .xbox {
     top: 10px; /* Abstand von oben, anpassen nach Bedarf */
-    left: 9vw; /* Abstand von links, anpassen nach Bedarf */
+    left: 11vw; /* Abstand von links, anpassen nach Bedarf */
     width: 5vw; /* Größe des Controllers, anpassen nach Bedarf */
-    rotate: -30deg;
+    /* rotate: -30deg; */
+    animation: moveAndRotateleft 8s infinite;
 }
 
 .spieleabende-box .playstation {
     bottom: 20px; /* Abstand von unten, anpassen nach Bedarf */
-    right: 9vw; /* Abstand von rechts, anpassen nach Bedarf */
+    right: 13vw; /* Abstand von rechts, anpassen nach Bedarf */
     width: 5vw; /* Größe des Controllers, anpassen nach Bedarf */
-    rotate: 30deg;
+    /* rotate: 30deg; */
+    animation: moveAndRotateright 8s infinite;
+}
+
+@keyframes moveAndRotateright {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(4vw) rotate(30deg); /* Passe die Werte nach Bedarf an */
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+@keyframes moveAndRotateleft {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(-4vw) rotate(-30deg); /* Passe die Werte nach Bedarf an */
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
 }
 
 /* Bilder Karussell */
@@ -279,6 +305,7 @@ h1{
         right: 6vw; /* Abstand von rechts, anpassen nach Bedarf */
         width: 13vw; /* Größe des Controllers, anpassen nach Bedarf */
         rotate: 180deg;
+        animation: none;
     }
     
 }
