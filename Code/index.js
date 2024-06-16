@@ -85,3 +85,16 @@ function showSpecificSlide(n) {
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
 }
+
+/* Header Bild */
+const video = document.getElementById('meinVideo');
+const playButton = document.getElementById('playButton');
+
+video.addEventListener('ended', () => {
+    video.currentTime = video.duration;
+});
+
+function playVideo() {
+    video.play();
+    playButton.style.display = 'none'; // Verstecke den Button nach dem Starten des Videos
+}

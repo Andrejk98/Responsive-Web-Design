@@ -15,9 +15,31 @@ body{
 */
 .header-bild{
     margin: 0 auto;
-    text-align: center;
-    border: 1px solid black;
-    padding: 200px 0px 200px 0px;
+    max-height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.header-bild video {
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+}
+
+.play-button {
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-family: 'EB Garamond';
+    font-size: larger;
+    font-weight: bold;
+    background-color: #05A0D1;
+    color: white;
+    border: none;
+    border-radius: 0.3vw;
+    cursor: pointer;
 }
 
 h1{
@@ -435,6 +457,22 @@ h1{
         rotate: 0deg;
         bottom: 60vw;
         right: 64vw;
+    }
+
+    .play-button {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        font-family: 'EB Garamond';
+        font-size: medium;
+        font-weight: bold;
+        background-color: #05A0D1;
+        color: white;
+        border: none;
+        border-radius: 1vw;
+        cursor: pointer;
     }
     
 }
