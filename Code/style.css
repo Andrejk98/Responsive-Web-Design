@@ -32,9 +32,9 @@ h1{
 
 .bild-box{
     display: flex;
-    flex-direction: column; /* Die Elemente werden vertikal untereinander angezeigt */
     align-items: center; /* Horizontal zentrierte Ausrichtung */
     margin: 0 auto;
+    align-content: center;
 }
 
 .text-box{
@@ -56,15 +56,18 @@ h1{
 }
 
 .mittelbild{
-    display: flex;
-    flex-direction: column; /* Die Elemente werden vertikal untereinander angezeigt */
-    align-items: center; /* Horizontal zentrierte Ausrichtung */
-    box-shadow: 5px 5px 10px #bbbbbb;
-    margin-top: 20px;  
+    /* padding: 50px; */
+    /* margin: 20px 5px 20px 5px; */
+    width: 40vw;
+    margin: 0 auto;
 }
 
-.mittelbild > img{
-    max-width: 80vw;
+.mitteltext{
+    width: 10vw;
+    box-shadow: 5px 5px 10px #bbbbbb;
+    padding: 50px;
+    margin: 20px 5px 20px 5px;
+    line-height: 120%;
 }
 
 .text{
@@ -75,6 +78,62 @@ h1{
     margin: 20px 5px 20px 5px;
     width: 30vw;
     line-height: 120%;
+}
+
+/* Lichtschwert Bild */
+.heimkino-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.heimkino-box .bild {
+    position: relative;
+    z-index: 1;
+    box-shadow: 5px 5px 10px #bbbbbb;
+    /* padding: 50px; */
+    margin: 20px 5px 20px 5px;
+    width: 40vw;
+}
+
+.heimkino-box .text {
+    position: relative;
+    z-index: 1;
+    background-color: #e9e9e9;
+    box-shadow: 5px 5px 10px #bbbbbb;
+    padding: 50px;
+    margin: 20px 5px 20px 5px;
+    width: 30vw;
+    line-height: 120%;
+}
+
+.heimkino-box .lichtschwert {
+    position: absolute;
+    z-index: 0;
+    bottom: 38vh; /* Abstand von unten, anpassen nach Bedarf */
+    right: 9.2vw; /* Abstand von rechts, anpassen nach Bedarf */
+    width: 6vw;
+    rotate: 30deg;
+}
+
+.lichtschwert2{
+    display: none;
+    position: absolute;
+    z-index: 0;
+    bottom: 38vh; /* Abstand von unten, anpassen nach Bedarf */
+    right: 9.2vw; /* Abstand von rechts, anpassen nach Bedarf */
+    width: 6vw;
+    rotate: 30deg;
+}
+
+.heimkino-box .crunchyroll{
+    position: absolute;
+    z-index: 0;
+    bottom: 4vh; /* Abstand von unten, anpassen nach Bedarf */
+    right: 41vw; /* Abstand von rechts, anpassen nach Bedarf */
+    width: 6vw;
 }
 
 /* Controller Bilder */
@@ -253,6 +312,32 @@ h1{
         margin-bottom: 0px;
     }
 
+    .mittelbild{
+        width: 95vw;
+        box-shadow: none;
+        padding: 0;
+        margin-bottom: 0px;
+    }
+
+    .mitteltext > .mittelbild{
+        margin-top: 0px;
+    }
+
+    .bild-box{
+        flex-direction: column;
+    }
+
+    .mitteltext{
+        width: 90vw;
+        max-width: 90vw;
+        border: 1px solid black;
+        box-shadow: none;
+        padding: 10px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        line-height: 130%;
+    }
+
     .text{
         width: 90vw;
         max-width: 90vw;
@@ -265,6 +350,11 @@ h1{
 
     h1{
         line-height: 120%;
+    }
+
+    h2{
+        line-height: 130%;
+        text-align: center;
     }
 
     .slideshow-container{
@@ -298,6 +388,7 @@ h1{
         left: 6vw; /* Abstand von links, anpassen nach Bedarf */
         width: 13vw; /* Größe des Controllers, anpassen nach Bedarf */
         rotate: 0deg;
+        animation: none;
     }
     
     .spieleabende-box .playstation {
@@ -306,6 +397,44 @@ h1{
         width: 13vw; /* Größe des Controllers, anpassen nach Bedarf */
         rotate: 180deg;
         animation: none;
+    }
+
+    .heimkino-box .bild {
+        position: relative;
+        z-index: 1;
+        width: 95vw;
+        border: 1px solid black;
+        box-shadow: none;
+        padding: 0;
+        margin-bottom: 0px;
+    }
+    
+    .heimkino-box .text {
+        position: relative;
+        z-index: 1;
+        width: 90vw;
+        max-width: 90vw;
+        border: 1px solid black;
+        box-shadow: none;
+        padding: 10px;
+        margin-top: 0px;
+        line-height: 130%;
+    }
+
+    .heimkino-box .lichtschwert{
+        z-index: 2;
+        width: 20vw;
+        rotate: 0deg;
+        bottom: 60vw;
+    }
+
+    .heimkino-box .lichtschwert2{
+        display: block;
+        z-index: 2;
+        width: 20vw;
+        rotate: 0deg;
+        bottom: 60vw;
+        right: 64vw;
     }
     
 }
@@ -323,28 +452,34 @@ h1{
     }
 
     .bild{
-        background-color: #999999;
+        /* background-color: #999999; */
         color: white;
         box-shadow: 3px 3px 8px black;
     }
 
-    .mittelbild{
-        background-color: #999999;
-        color: white;
-        box-shadow: 5px 5px 10px black;
+    .mitteltext{
+        box-shadow: 3px 3px 8px black; 
     }
     
     .slideshow-container{
         box-shadow: 3px 3px 8px black;
     }
-
-    
     
     .spieleabende-box .bild {
         box-shadow: 3px 3px 8px black; 
     }
     
     .spieleabende-box .text {
+        background-color: #999999;
+        color: white;
+        box-shadow: 3px 3px 8px black;
+    }
+
+    .heimkino-box .bild {
+        box-shadow: 3px 3px 8px black; 
+    }
+    
+    .heimkino-box .text {
         background-color: #999999;
         color: white;
         box-shadow: 3px 3px 8px black;
