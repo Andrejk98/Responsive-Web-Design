@@ -98,3 +98,13 @@ function playVideo() {
     video.play();
     playButton.style.display = 'none'; // Verstecke den Button nach dem Starten des Videos
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    video.load();
+
+    // Event listener für das 'loadedmetadata'-Event, um das Poster zu setzen
+    video.addEventListener('loadedmetadata', function() {
+        video.currentTime = 0; // Setzt die aktuelle Zeit des Videos auf den Anfang
+        video.pause(); // Pausiert das Video
+    });
+});
