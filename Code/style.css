@@ -134,8 +134,8 @@ h1{
 .heimkino-box .lichtschwert {
     position: absolute;
     z-index: 0;
-    bottom: 38vh; /* Abstand von unten, anpassen nach Bedarf */
-    right: 9.2vw; /* Abstand von rechts, anpassen nach Bedarf */
+    bottom: 45.5vh; /* Abstand von unten, anpassen nach Bedarf */
+    right: 8.4vw; /* Abstand von rechts, anpassen nach Bedarf */
     width: 6vw;
     rotate: 30deg;
 }
