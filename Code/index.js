@@ -109,3 +109,28 @@ document.addEventListener('DOMContentLoaded', function() {
         video.pause(); // Pausiert das Video
     });
 });
+
+document.addEventListener('DOMContentLoaded',() =>{
+    const openPopupButton = document.querySelector('.openPopup');
+    const popup = document.getElementById('popup');
+    const closeButton = document.querySelector('.close');
+  
+    openPopupButton.addEventListener('click', () => {
+      popup.style.display = 'flex';
+      console.log("geöffnet");
+    });
+  
+    closeButton.addEventListener('click', () => {
+      popup.style.display = 'none';
+    });
+    
+    window.addEventListener('click', (event) => {
+      if(event.target === popup){
+        popup.style.display = 'none';
+      }
+    });
+
+    document.querySelector('.Repository').addEventListener('click', function() {
+        window.open('https://github.com/Andrejk98/Responsive-Web-Design', '_blank');
+    });
+});

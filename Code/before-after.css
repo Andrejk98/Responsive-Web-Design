@@ -39,20 +39,20 @@
     margin: -32px 0 0 -32px;
  
     content:'\21d4';
-    color:#00cb4c;
+    color:white;
     font-weight:bold;
     font-size:36px;
     text-align:center;
     line-height:64px;
  
-    background: #FF34B3; /* maroon1 */
-    border:2px solid #00cb4c; /* komplementär grün */
+    background: rgba(0, 0, 0, 0.5);
+    border:2px solid white;
     border-radius: 50%;
     transition:all 0.3s ease;
     box-shadow:
       0 2px 6px rgba(0,0,0,.3), 
       inset 0 2px 0 rgba(255,255,255,.5),
-      inset 0 60px 50px -30px #ff34c9; /* pink*/ 
+      inset 0 60px 50px -30px rgba(0, 0, 0, 0.5);
 }
 
 .ba-slider .handle.ba-draggable:after {
