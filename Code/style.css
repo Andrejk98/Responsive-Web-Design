@@ -310,6 +310,13 @@ h1{
 }
 */
 @media only screen and (max-width: 720px){
+    body{
+        font-size: 0.5 rem;
+    }
+
+    h1 h2{
+        font-size: 1.5 rem;
+    }
     
     .bild-text-box{
         display: flex;
