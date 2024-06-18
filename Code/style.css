@@ -16,14 +16,21 @@ body{
 .header-bild{
     margin: 0 auto;
     max-height: 100vh;
-    width: 100vw;
+    max-width: 100vw;
     position: relative;
+    overflow: hidden;
 }
 
 .header-bild video {
     width: 100vw;
+    max-width: 100vw;
     height: auto;
     max-height: 100vh;
+    object-fit: cover;
+}
+
+#meinVideo{
+    max-width: 100vw;
 }
 
 .play-button {
@@ -57,13 +64,13 @@ h1{
     align-items: center; /* Horizontal zentrierte Ausrichtung */
     margin: 0 auto;
     align-content: center;
+    max-width: 100vw;
 }
 
 .text-box{
     display: flex;
     align-items: center; /* Horizontal zentrierte Ausrichtung */
     justify-content: center;
-    line-height: 120%;
 }
 
 .text-box > div{
@@ -80,7 +87,7 @@ h1{
 .mittelbild{
     /* padding: 50px; */
     /* margin: 20px 5px 20px 5px; */
-    width: 40vw;
+    max-width: 40vw;
     margin: 0 auto;
 }
 
@@ -89,7 +96,7 @@ h1{
     box-shadow: 5px 5px 10px #bbbbbb;
     padding: 50px;
     margin: 20px 5px 20px 5px;
-    line-height: 120%;
+    line-height: 130%;
 }
 
 .text{
@@ -99,7 +106,7 @@ h1{
     padding: 50px;
     margin: 20px 5px 20px 5px;
     width: 30vw;
-    line-height: 120%;
+    line-height: 130%;
 }
 
 /* Lichtschwert Bild */
@@ -308,6 +315,8 @@ h1{
     padding: 20px;
 }
 */
+
+/* Smartphone */
 @media only screen and (max-width: 720px){
     body{
         font-size: 0.5 rem;
@@ -315,10 +324,14 @@ h1{
 
     h1{
         font-size: 2.5 rem;
+        line-height: 120%;
+        text-align: center;
     }
 
     h2{
         font-size: 1.5 rem;
+        line-height: 130%;
+        text-align: center;
     }
 
     .bild-text-box{
@@ -477,6 +490,171 @@ h1{
         cursor: pointer;
     }
     
+}
+/* tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    body{
+        font-size: 1.5rem;
+    }
+
+    h1{
+        font-size: 3.5rem;
+        line-height: 130%;
+        text-align: center;
+    }
+
+    h2{
+        font-size: 3rem;
+        line-height: 130%;
+        text-align: center;
+    }
+
+    .bild-text-box{
+        display: flex;
+        flex-direction: column;
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+
+    .bild{
+        width: 95vw;
+        border: 1px solid black;
+        box-shadow: none;
+        padding: 0;
+        margin-bottom: 0px;
+    }
+
+    .mittelbild{
+        width: 95vw;
+        box-shadow: none;
+        padding: 0;
+        margin-bottom: 0px;
+    }
+
+    .mitteltext > .mittelbild{
+        margin-top: 0px;
+    }
+
+    .bild-box{
+        flex-direction: column;
+    }
+
+    .mitteltext{
+        width: 95vw;
+        max-width: 95vw;
+        border: 1px solid black;
+        box-shadow: none;
+        padding: 10px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        line-height: 130%;
+    }
+
+    .text{
+        width: 95vw;
+        max-width: 95vw;
+        border: 1px solid black;
+        box-shadow: none;
+        padding: 10px;
+        margin-top: 0px;
+        line-height: 130%;
+    }
+
+    .slideshow-container{
+        max-width: 95vw;
+    }
+
+    .spieleabende-box .bild {
+        position: relative;
+        z-index: 1;
+        width: 95vw;
+        border: 1px solid black;
+        box-shadow: none;
+        padding: 0;
+        margin-bottom: 0px;
+    }
+    
+    .spieleabende-box .text {
+        position: relative;
+        z-index: 1;
+        width: 95vw;
+        max-width: 95vw;
+        border: 1px solid black;
+        box-shadow: none;
+        padding: 10px;
+        margin-top: 0px;
+        line-height: 130%;
+    }
+
+    .spieleabende-box .xbox {
+        top: -10px; /* Abstand von oben, anpassen nach Bedarf */
+        left: 6vw; /* Abstand von links, anpassen nach Bedarf */
+        width: 13vw; /* Größe des Controllers, anpassen nach Bedarf */
+        rotate: 0deg;
+        animation: none;
+    }
+    
+    .spieleabende-box .playstation {
+        bottom: -10px; /* Abstand von unten, anpassen nach Bedarf */
+        right: 6vw; /* Abstand von rechts, anpassen nach Bedarf */
+        width: 13vw; /* Größe des Controllers, anpassen nach Bedarf */
+        rotate: 180deg;
+        animation: none;
+    }
+
+    .heimkino-box .bild {
+        position: relative;
+        z-index: 1;
+        width: 95vw;
+        border: 1px solid black;
+        box-shadow: none;
+        padding: 0;
+        margin-bottom: 0px;
+    }
+    
+    .heimkino-box .text {
+        position: relative;
+        z-index: 1;
+        width: 90vw;
+        max-width: 90vw;
+        border: 1px solid black;
+        box-shadow: none;
+        padding: 10px;
+        margin-top: 0px;
+        line-height: 130%;
+    }
+
+    .heimkino-box .lichtschwert{
+        z-index: 2;
+        width: 20vw;
+        rotate: 0deg;
+        bottom: 60vw;
+    }
+
+    .heimkino-box .lichtschwert2{
+        display: block;
+        z-index: 2;
+        width: 20vw;
+        rotate: 0deg;
+        bottom: 60vw;
+        right: 64vw;
+    }
+
+    .play-button {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        font-family: 'EB Garamond';
+        font-size: medium;
+        font-weight: bold;
+        background-color: #05A0D1;
+        color: white;
+        border: none;
+        border-radius: 1vw;
+        cursor: pointer;
+    }
 }
 
 @media (prefers-color-scheme: dark) {

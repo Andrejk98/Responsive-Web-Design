@@ -10,11 +10,11 @@ function restoreOriginalOrder() {
 }
 
 // Funktion zum Behandeln der Media Query
-function handleMediaQuery(mediaQuery) {
+function handleMediaQuery(mediaQuery1, mediaQuery2) {
     const boxes = document.querySelectorAll('.bild-text-box');
-    if (mediaQuery.matches) {
-        // Media Query ist erfüllt
-        console.log("Media Query ist erfüllt");
+    if (mediaQuery1.matches || mediaQuery2.matches) {
+        // Eine der Media Queries ist erfüllt
+        console.log("Eine der Media Queries ist erfüllt");
         boxes.forEach(box => {
             const text = box.querySelector('.text');
             const bild = box.querySelector('.bild');
@@ -23,19 +23,20 @@ function handleMediaQuery(mediaQuery) {
             }
         });
     } else {
-        // Media Query ist nicht erfüllt
-        console.log("Media Query ist nicht erfüllt");
+        // Keine der Media Queries ist erfüllt
+        console.log("Keine der Media Queries ist erfüllt");
         restoreOriginalOrder();
     }
 }
 
-// Definiere die Media Query, auf die du reagieren möchtest
-const mediaQuery = window.matchMedia("(max-width: 720px)");
+// Definiere die Media Queries, auf die du reagieren möchtest
+const mediaQuery1 = window.matchMedia("(max-width: 720px)");
+const mediaQuery2 = window.matchMedia("(max-width: 1024px)");
 
-// Führe die Funktion beim Laden der Seite aus und füge einen Event-Listener hinzu,
-// um auf Änderungen der Media Query zu reagieren
-handleMediaQuery(mediaQuery);
-mediaQuery.addListener(handleMediaQuery);
+// Führe die Funktion beim Laden der Seite aus und füge Event-Listener für jede Media Query hinzu
+handleMediaQuery(mediaQuery1, mediaQuery2);
+mediaQuery1.addListener(() => handleMediaQuery(mediaQuery1, mediaQuery2));
+mediaQuery2.addListener(() => handleMediaQuery(mediaQuery1, mediaQuery2));
 
 // Code für Vorhernachher Slider
 $('.ba-slider').beforeAfter();
