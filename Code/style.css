@@ -150,14 +150,6 @@ h1{
     rotate: 30deg;
 }
 
-.heimkino-box .crunchyroll{
-    position: absolute;
-    z-index: 0;
-    bottom: 4vh; /* Abstand von unten, anpassen nach Bedarf */
-    right: 41vw; /* Abstand von rechts, anpassen nach Bedarf */
-    width: 6vw;
-}
-
 /* Controller Bilder */
 .spieleabende-box {
     position: relative;
@@ -195,7 +187,7 @@ h1{
 .spieleabende-box .xbox {
     top: 10px; /* Abstand von oben, anpassen nach Bedarf */
     left: 11vw; /* Abstand von links, anpassen nach Bedarf */
-    width: 5vw; /* Größe des Controllers, anpassen nach Bedarf */
+    width: 7vw; /* Größe des Controllers, anpassen nach Bedarf */
     /* rotate: -30deg; */
     animation: moveAndRotateleft 8s infinite;
 }
@@ -203,7 +195,7 @@ h1{
 .spieleabende-box .playstation {
     bottom: 20px; /* Abstand von unten, anpassen nach Bedarf */
     right: 13vw; /* Abstand von rechts, anpassen nach Bedarf */
-    width: 5vw; /* Größe des Controllers, anpassen nach Bedarf */
+    width: 6vw; /* Größe des Controllers, anpassen nach Bedarf */
     /* rotate: 30deg; */
     animation: moveAndRotateright 8s infinite;
 }
