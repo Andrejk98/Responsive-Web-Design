@@ -21,7 +21,7 @@ body{
 }
 
 .header-bild video {
-    width: 100%;
+    width: 100vw;
     height: auto;
     max-height: 100vh;
 }
