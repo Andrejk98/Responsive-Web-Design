@@ -377,9 +377,30 @@ h1{
         text-align: center;
     }
 
-    .header-text{
+    .header-bild {
+        margin: 0 auto;
+        height: 80vh;
+        max-width: none;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .header-bild video {
+        width: 100%; /* Fülle die Breite des Containers */
+        height: 100%; /* Fülle die Höhe des Containers */
+        max-height: 100vh;
+        object-fit: cover; /* Schließt den Container und schneidet überflüssige Teile ab */
+        object-position: center; /* Zentriert das Video */
+    }
+    
+    .header-text {
+        width: 100vw;
         padding-left: 10px;
         padding-right: 10px;
+    }
+    
+    #meinVideo {
+        height: 80vh;
     }
 
     .bild-text-box{
@@ -408,20 +429,20 @@ h1{
     }
 
     .mitteltext{
-        width: 100vw;
+        width: calc(100vw - 20px); /* 100vw minus 10px padding on each side */
         margin-top: 0px;
         margin-bottom: 0px;
         line-height: 130%;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 0 10px; /* 10px padding on left and right */
+        box-sizing: border-box; /* Include padding in the element's total width */
     }
 
-    .text{
-        width: 100vw;
+    .text {
+        width: calc(100vw - 20px); /* 100vw minus 10px padding on each side */
         margin-top: 0px;
         line-height: 130%;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 0 10px; /* 10px padding on left and right */
+        box-sizing: border-box; /* Include padding in the element's total width */
     }
 
     h1{
@@ -447,11 +468,11 @@ h1{
     .spieleabende-box .text {
         position: relative;
         z-index: 1;
-        width: 100vw;
+        width: calc(100vw - 20px); /* 100vw minus 10px padding on each side */
         margin-top: 0px;
         line-height: 130%;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 0px 10px;
+        box-sizing: border-box; /* Include padding in the element's total width */
     }
 
     .spieleabende-box .xbox {
@@ -481,11 +502,11 @@ h1{
     .heimkino-box .text {
         position: relative;
         z-index: 1;
-        width: 100vw;
+        width: calc(100vw - 20px); /* 100vw minus 10px padding on each side */
         margin-top: 0px;
         line-height: 130%;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 0px 10px;;
+        box-sizing: border-box; /* Include padding in the element's total width */
     }
 
     .heimkino-box .lichtschwert{
@@ -522,6 +543,10 @@ h1{
 
     .openPopup{
         font-size: 1.5rem;
+    }
+
+    .prev, .next{
+        display: none;
     }
     
 }
