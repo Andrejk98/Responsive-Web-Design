@@ -414,6 +414,10 @@ h1{
         text-align: center;
     }
 
+    .item{
+        filter: none;
+    }
+
     .header-bild {
         margin: 0 auto;
         height: 80vh;
