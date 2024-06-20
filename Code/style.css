@@ -21,6 +21,20 @@ body{
     object-fit: cover;
 }
 
+.scrolling-text {
+    position: absolute;
+            top: -200px; /* Startposition deutlich weiter oben */
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            font-size: 2rem;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            opacity: 0; /* Unsichtbar zu Beginn */
+            transition: opacity 3s, top 1s; /* Übergangseffekt für die Sichtbarkeit und Position */
+}
+
 .header-text{
     width: 100vw;
 }

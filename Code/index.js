@@ -88,27 +88,44 @@ function showSpecificSlide(n) {
 }
 
 /* Header Bild */
-const video = document.getElementById('meinVideo');
-const playButton = document.getElementById('playButton');
-
-video.addEventListener('ended', () => {
-    video.currentTime = video.duration;
-});
-
-function playVideo() {
-    video.play();
-    playButton.style.display = 'none'; // Verstecke den Button nach dem Starten des Videos
-}
-
 document.addEventListener('DOMContentLoaded', function() {
-    video.load();
+    const video = document.getElementById('meinVideo');
+    const scrollingText = document.getElementById('scrollingText');
+    const headerBild = document.querySelector('.header-bild');
 
-    // Event listener für das 'loadedmetadata'-Event, um das Poster zu setzen
+    function updateTextPosition() {
+        const videoHeight = video.getBoundingClientRect().height;
+        const videoDuration = video.duration;
+        const currentTime = video.currentTime;
+
+        const percentageComplete = currentTime / videoDuration;
+        const newPosition = percentageComplete * (videoHeight - 200); // Neue Position mit Offset nach oben
+
+        scrollingText.style.top = newPosition + 'px';
+    }
+
     video.addEventListener('loadedmetadata', function() {
-        video.currentTime = 0; // Setzt die aktuelle Zeit des Videos auf den Anfang
-        video.pause(); // Pausiert das Video
+        setTimeout(() => {
+            scrollingText.style.opacity = 1; // Text nach 1 Sekunde einblenden
+        }, 1000);
+
+        video.play();
+        video.playbackRate = 1.5; // Setze die Wiedergabegeschwindigkeit auf das Normale
+
+        // Aktualisiere die Position des Textes, während das Video abspielt
+        video.addEventListener('timeupdate', updateTextPosition);
     });
-}); 
+
+    // Optional: Funktion zum manuellen Starten des Videos über den Button
+    function playVideo() {
+        video.play();
+        video.playbackRate = 1.5; // Setze die Wiedergabegeschwindigkeit auf das Normale
+        document.getElementById('playButton').style.display = 'none';
+    }
+
+    // Button ist versteckt, da das Video automatisch abspielt
+    document.getElementById('playButton').style.display = 'none';
+});
 
 /* End Button */
 document.addEventListener('DOMContentLoaded',() =>{
