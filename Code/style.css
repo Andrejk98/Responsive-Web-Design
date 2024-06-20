@@ -1,7 +1,8 @@
 body{
     margin: 0 auto;
-    background-color: white;
+    background-color: lightgrey;
     color: black;
+    font-size: 1.5rem;
 }
 
 .header-bild{
@@ -24,6 +25,7 @@ body{
     width: calc(100vw - 40px); /* 100vw minus 10px padding on each side */
     padding-left: 20px;
     padding-right: 20px;
+    line-height: 140%;
 }
 
 .center{
@@ -138,7 +140,7 @@ h2{
     width: 10vw;
     padding: 50px;
     margin: 20px 5px 20px 5px;
-    line-height: 130%;
+    line-height: 140%;
 }
 
 .text{
@@ -147,7 +149,7 @@ h2{
     padding: 50px;
     margin: 20px 5px 20px 5px;
     width: 30vw;
-    line-height: 130%;
+    line-height: 140%;
 }
 
 /* Controller Bilder */
@@ -174,7 +176,7 @@ h2{
     padding: 50px;
     margin: 20px 5px 20px 5px;
     width: 30vw;
-    line-height: 120%;
+    line-height: 140%;
 }
 
 .spieleabende-box .xbox {
@@ -303,6 +305,7 @@ h2{
   .callToAction{
     position: relative;
     text-align: center;
+    padding: 50px;
   }
 
   .openPopup{
@@ -342,7 +345,7 @@ h2{
     color: black;
     font-size: 40px; 
     text-align: center; 
-    line-height: 120%;
+    line-height: 140%;
   }
   
   .close{
@@ -370,7 +373,7 @@ h2{
 /* Smartphone */
 @media only screen and (max-width: 720px){
     body{
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
 
     h1{
@@ -380,7 +383,7 @@ h2{
     }
 
     h2{
-        font-size: 1.5rem;
+        font-size: 2rem;
         line-height: 130%;
         text-align: center;
     }
@@ -409,6 +412,7 @@ h2{
         width: calc(100vw - 30px); /* 100vw minus 10px padding on each side */
         padding-left: 15px;
         padding-right: 15px;
+        line-height: 130%;
     }
     
     #meinVideo {
@@ -424,7 +428,6 @@ h2{
 
     .bild{
         width: 100vw;
-        margin-bottom: 0px;
     }
 
     .mittelbild{
@@ -451,7 +454,6 @@ h2{
 
     .text {
         width: calc(100vw - 20px); /* 100vw minus 10px padding on each side */
-        margin-top: 0px;
         line-height: 130%;
         padding: 0 10px; /* 10px padding on left and right */
         box-sizing: border-box; /* Include padding in the element's total width */
@@ -727,7 +729,6 @@ h2{
     }
 
     .bild{
-        /* background-color: #999999; */
         color: white;
     }
 
