@@ -90,43 +90,23 @@ function showSpecificSlide(n) {
 /* Header Bild */
 document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('meinVideo');
-    const scrollingText = document.getElementById('scrollingText');
-    const headerBild = document.querySelector('.header-bild');
-
-    function updateTextPosition() {
-        const videoHeight = video.getBoundingClientRect().height;
-        const videoDuration = video.duration;
-        const currentTime = video.currentTime;
-
-        const percentageComplete = currentTime / videoDuration;
-        const newPosition = percentageComplete * (videoHeight - 200); // Neue Position mit Offset nach oben
-
-        scrollingText.style.top = newPosition + 'px';
-    }
-
+    
+    // Überprüfen, ob das Video geladen ist
     video.addEventListener('loadedmetadata', function() {
-        setTimeout(() => {
-            scrollingText.style.opacity = 1; // Text nach 1 Sekunde einblenden
-        }, 1000);
-
         video.play();
-        video.playbackRate = 1.5; // Setze die Wiedergabegeschwindigkeit auf das Normale
-
-        // Aktualisiere die Position des Textes, während das Video abspielt
-        video.addEventListener('timeupdate', updateTextPosition);
+        video.playbackRate = 1.5; // Setzt die Wiedergabegeschwindigkeit auf das Doppelte
     });
 
     // Optional: Funktion zum manuellen Starten des Videos über den Button
     function playVideo() {
         video.play();
-        video.playbackRate = 1.5; // Setze die Wiedergabegeschwindigkeit auf das Normale
+        video.playbackRate = 1.5; // Setzt die Wiedergabegeschwindigkeit auf das Doppelte
         document.getElementById('playButton').style.display = 'none';
     }
-
+    
     // Button ist versteckt, da das Video automatisch abspielt
     document.getElementById('playButton').style.display = 'none';
 });
-
 /* End Button */
 document.addEventListener('DOMContentLoaded',() =>{
     const openPopupButton = document.querySelector('.openPopup');

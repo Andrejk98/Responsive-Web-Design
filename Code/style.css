@@ -1,6 +1,4 @@
 body{
-    font-family: 'EB Garamond';
-    font-size: large;
     margin: 0 auto;
     background-color: white;
     color: black;
@@ -21,22 +19,15 @@ body{
     object-fit: cover;
 }
 
-.scrolling-text {
-    position: absolute;
-            top: -200px; /* Startposition deutlich weiter oben */
-            left: 50%;
-            transform: translateX(-50%);
-            white-space: nowrap;
-            font-size: 2rem;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            opacity: 0; /* Unsichtbar zu Beginn */
-            transition: opacity 3s, top 1s; /* Übergangseffekt für die Sichtbarkeit und Position */
+.header-text{
+    font-family: 'Ubuntu';
+    width: calc(100vw - 40px); /* 100vw minus 10px padding on each side */
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.header-text{
-    width: 100vw;
+.center{
+    text-align: center;
 }
 
 #meinVideo{
@@ -49,9 +40,6 @@ body{
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
-    font-family: 'EB Garamond';
-    font-size: larger;
-    font-weight: bold;
     background-color: #05A0D1;
     color: white;
     border: none;
@@ -61,6 +49,16 @@ body{
 
 h1{
     text-align: center;
+    font-size: 4rem;
+    
+}
+
+h1, h2, h3{
+    font-family: 'Videogames';
+}
+
+h2{
+    font-size: 3rem;
 }
 
 .bild-text-box{
@@ -95,7 +93,9 @@ h1{
 }
 
 .caption {
-    font-size: 1.8rem;
+    font-family: "Permanent Marker", cursive;
+    font-style: normal;
+    font-size: 2rem;
     text-align: center;
     line-height: 2em;
     color: black;
@@ -134,6 +134,7 @@ h1{
 }
 
 .mitteltext{
+    font-family: 'Ubuntu';
     width: 10vw;
     padding: 50px;
     margin: 20px 5px 20px 5px;
@@ -141,56 +142,12 @@ h1{
 }
 
 .text{
+    font-family: 'Ubuntu';
     /* text-align: center; */
     padding: 50px;
     margin: 20px 5px 20px 5px;
     width: 30vw;
     line-height: 130%;
-}
-
-/* Lichtschwert Bild */
-.heimkino-box {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.heimkino-box .bild {
-    position: relative;
-    z-index: 1;
-    /* padding: 50px; */
-    margin: 20px 5px 20px 5px;
-    width: 50vw;
-}
-
-.heimkino-box .text {
-    position: relative;
-    z-index: 1;
-    padding: 50px;
-    margin: 20px 5px 20px 5px;
-    width: 30vw;
-    line-height: 120%;
-}
-
-.heimkino-box .lichtschwert {
-    position: absolute;
-    z-index: 0;
-    bottom: 45.5vh; /* Abstand von unten, anpassen nach Bedarf */
-    right: 8.4vw; /* Abstand von rechts, anpassen nach Bedarf */
-    width: 10vw;
-    rotate: 30deg;
-}
-
-.lichtschwert2{
-    display: none;
-    position: absolute;
-    z-index: 0;
-    bottom: 38vh; /* Abstand von unten, anpassen nach Bedarf */
-    right: 9.2vw; /* Abstand von rechts, anpassen nach Bedarf */
-    width: 6vw;
-    rotate: 30deg;
 }
 
 /* Controller Bilder */
@@ -211,6 +168,7 @@ h1{
 }
 
 .spieleabende-box .text {
+    font-family: 'Ubuntu';
     position: relative;
     z-index: 1;
     padding: 50px;
@@ -381,7 +339,6 @@ h1{
   }
   
   .popup-text{
-    font-family: 'BeachVibes';
     color: black;
     font-size: 40px; 
     text-align: center; 
@@ -586,9 +543,6 @@ h1{
         left: 50%;
         transform: translateX(-50%);
         padding: 10px 20px;
-        font-family: 'EB Garamond';
-        font-size: medium;
-        font-weight: bold;
         background-color: #05A0D1;
         color: white;
         border: none;
@@ -791,15 +745,15 @@ h1{
 }
 
 @font-face {
-    font-family: 'EB Garamond';
-    src: url('../Schriftart/static/EBGaramond-SemiBold.ttf') format('ttf');
+    font-family: 'Ubuntu';
+    src: url(../Schriftart/static/Ubuntu-Regular.ttf);
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'EB Garamond';
-    src: url('../Schriftart/static/EBGaramond-ExtraBold.ttf') format('ttf');
-    font-weight: bold;
+    font-family: 'Videogames';
+    src: url('../Schriftart/PixelGamer-Regular.otf'); /* IE9 Compat Modes */
+    font-weight: normal;
     font-style: normal;
 }

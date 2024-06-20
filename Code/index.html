@@ -9,6 +9,9 @@
     <link type="text/css" href="before-after.css" rel="stylesheet">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="before-after.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="header-bild">
@@ -16,13 +19,12 @@
             <source src="../Video/Leinwand2.mp4" type="video/mp4">
             Ihr Browser unterstützt das Video-Tag nicht.
         </video>
-        <div class="scrolling-text" id="scrollingText">Dieser Text scrollt synchron zum Video</div>
         <button class="play-button" id="playButton" onclick="playVideo()">Alexa Leinwand runter</button>
     </div>
 
     <div class="text-box">
         <div class="header-text">
-            <h1>Was macht die Wohnung für mich Besonders</h1>
+            <h2 class="center">Was macht die Wohnung Besonders</h2>
             Die Wohnung meines Freundes ist nicht nur ein einfacher Raum, sondern ein Ort, der eine Vielzahl von Erinnerungen und Emotionen birgt. Ein Ort mit einer sehr einladenden Atmosphäre, in welcher jeder willkommen ist, die sofort ein Gefühl von Zuhause vermittelt.
 
             Schon beim Betreten seiner Wohnung spürt man die Wärme und Gastfreundschaft, die sie umgibt. Errinerungen an unzähligen Stunden des Lachens, der Gespräche und der gemeinsamen Erlebnisse, die wir dort verbracht haben. Ob bei gemütlichen Filmabenden, spontanen Kochsessions. beim Zocken oder einfach nur beim Abhängen auf der Couch – die Zeit in seiner Wohnung ist immer voller Freude und Leichtigkeit.
@@ -33,7 +35,7 @@
         </div>
     </div>
 
-    <div class="bild-text-box heimkino-box">
+    <div class="bild-text-box">
         <div class="bild">
             <div class="item">
                 <div class="polaroid">
@@ -50,8 +52,6 @@
             Dieser ist das Herzstück des Heimkinos. Hier sind meine Konsolen untergebracht, um mithilfe der Heimkinoanlage ein perfektes Umfeld für Zock und Spieleabende zu gestalten.
             Unschwer zu erkennen steht hier allerdings kein Fernseher sonder eine Leinwand fährt per Sprachsteuerung von der Decke herunter und wird von einem 4k Heimkino Beamer bestrahlt.
         </div>
-        <img src="../Bilder/lichtschwert.png" alt="Lichtschwert" class="lichtschwert">
-        <img src="../Bilder/lichtschwert.png" alt="Lichtschwert" class="lichtschwert2">
     </div>
 
     <div class="bild-text-box">
@@ -81,7 +81,7 @@
         <div class="bild">
             <div class="item">
                 <div class="polaroid">
-                    <img src="../Bilder/Tobis Fernsehtisch.JPG">
+                    <img src="../Bilder/Tobis Fernsehtisch.JPG" alt="Spieleabend">
                     <div class="caption">Unsere Spieleabende</div>
                 </div>
             </div>
@@ -186,7 +186,7 @@
     </div>
     
     <div class="callToAction">
-        <button class="openPopup">Komm doch mal vorbei</button>
+        <button class="openPopup">Kommt doch mal vorbei</button>
     </div>
 
     <div id="popup" class="popup">
