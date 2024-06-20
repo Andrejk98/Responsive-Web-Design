@@ -377,13 +377,13 @@ h2{
     }
 
     h1{
-        font-size: 2.5rem;
+        font-size: 3rem;
         line-height: 120%;
         text-align: center;
     }
 
     h2{
-        font-size: 2rem;
+        font-size: 2.5rem;
         line-height: 130%;
         text-align: center;
     }
@@ -505,40 +505,6 @@ h2{
         animation: none;
     }
 
-    .heimkino-box .bild {
-        position: relative;
-        z-index: 1;
-        width: 100vw;
-        padding: 0;
-        margin-bottom: 0px;
-    }
-    
-    .heimkino-box .text {
-        position: relative;
-        z-index: 1;
-        width: calc(100vw - 20px); /* 100vw minus 10px padding on each side */
-        margin-top: 0px;
-        line-height: 130%;
-        padding: 0px 10px;;
-        box-sizing: border-box; /* Include padding in the element's total width */
-    }
-
-    .heimkino-box .lichtschwert{
-        display: none;
-        z-index: 2;
-        width: 20vw;
-        rotate: 0deg;
-        bottom: 60vw;
-    }
-
-    .heimkino-box .lichtschwert2{
-        z-index: 2;
-        width: 20vw;
-        rotate: 0deg;
-        bottom: 60vw;
-        right: 64vw;
-    }
-
     .play-button {
         position: absolute;
         bottom: 10px;
@@ -564,12 +530,12 @@ h2{
 /* tablet */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     body{
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     h1{
         font-size: 3.5rem;
-        line-height: 130%;
+        line-height: 120%;
         text-align: center;
     }
 
@@ -577,6 +543,37 @@ h2{
         font-size: 3rem;
         line-height: 130%;
         text-align: center;
+    }
+
+    .item{
+        filter: none;
+    }
+
+    .header-bild {
+        margin: 0 auto;
+        height: 80vh;
+        max-width: none;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .header-bild video {
+        width: 100%; /* Fülle die Breite des Containers */
+        height: 100%; /* Fülle die Höhe des Containers */
+        max-height: 100vh;
+        object-fit: cover; /* Schließt den Container und schneidet überflüssige Teile ab */
+        object-position: center; /* Zentriert das Video */
+    }
+    
+    .header-text {
+        width: calc(100vw - 30px); /* 100vw minus 10px padding on each side */
+        padding-left: 15px;
+        padding-right: 15px;
+        line-height: 130%;
+    }
+    
+    #meinVideo {
+        height: 80vh;
     }
 
     .bild-text-box{
@@ -588,15 +585,10 @@ h2{
 
     .bild{
         width: 100vw;
-        max-width: 100vw;
-        padding: 0;
-        margin-bottom: 0px;
     }
 
     .mittelbild{
         width: 100vw;
-        box-shadow: none;
-        padding: 0;
         margin-bottom: 0px;
     }
 
@@ -609,20 +601,28 @@ h2{
     }
 
     .mitteltext{
-        width: 100vw;
-        max-width: 100vw;
-        padding: none;
+        width: calc(100vw - 20px); /* 100vw minus 10px padding on each side */
         margin-top: 0px;
         margin-bottom: 0px;
         line-height: 130%;
+        padding: 0 10px; /* 10px padding on left and right */
+        box-sizing: border-box; /* Include padding in the element's total width */
     }
 
-    .text{
-        width: 100vw;
-        max-width: 100vw;
-        padding: none;
-        margin-top: 0px;
+    .text {
+        width: calc(100vw - 20px); /* 100vw minus 10px padding on each side */
         line-height: 130%;
+        padding: 0 10px; /* 10px padding on left and right */
+        box-sizing: border-box; /* Include padding in the element's total width */
+    }
+
+    h1{
+        line-height: 120%;
+    }
+
+    h2{
+        line-height: 130%;
+        text-align: center;
     }
 
     .slideshow-container{
@@ -633,18 +633,17 @@ h2{
         position: relative;
         z-index: 1;
         width: 100vw;
-        padding: 0;
         margin-bottom: 0px;
     }
     
     .spieleabende-box .text {
         position: relative;
         z-index: 1;
-        width: 100vw;
-        max-width: 100vw;
-        padding: 10px;
+        width: calc(100vw - 20px); /* 100vw minus 10px padding on each side */
         margin-top: 0px;
         line-height: 130%;
+        padding: 0px 10px;
+        box-sizing: border-box; /* Include padding in the element's total width */
     }
 
     .spieleabende-box .xbox {
@@ -663,49 +662,12 @@ h2{
         animation: none;
     }
 
-    .heimkino-box .bild {
-        position: relative;
-        z-index: 1;
-        width: 100vw;
-        padding: 0;
-        margin-bottom: 0px;
-    }
-    
-    .heimkino-box .text {
-        position: relative;
-        z-index: 1;
-        width: 100vw;
-        max-width: 100vw;
-        padding: 10px;
-        margin-top: 0px;
-        line-height: 130%;
-    }
-
-    .heimkino-box .lichtschwert{
-        z-index: 2;
-        width: 20vw;
-        rotate: 0deg;
-        bottom: 60vw;
-    }
-
-    .heimkino-box .lichtschwert2{
-        display: block;
-        z-index: 2;
-        width: 20vw;
-        rotate: 0deg;
-        bottom: 60vw;
-        right: 64vw;
-    }
-
     .play-button {
         position: absolute;
         bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
         padding: 10px 20px;
-        font-family: 'EB Garamond';
-        font-size: medium;
-        font-weight: bold;
         background-color: #05A0D1;
         color: white;
         border: none;
@@ -716,6 +678,11 @@ h2{
     .openPopup{
         font-size: 1.5rem;
     }
+
+    .prev, .next{
+        display: none;
+    }
+    
 }
 
 @media (prefers-color-scheme: dark) {
