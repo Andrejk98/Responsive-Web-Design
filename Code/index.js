@@ -159,6 +159,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Button ist versteckt, da das Video automatisch abspielt
     document.getElementById('playButton').style.display = 'none';
 });
+
+const video = document.getElementById('meinVideo');
+const floatingText = document.querySelector('.floating-text');
+
+// Überwache die Abspielgeschwindigkeit des Videos
+video.addEventListener('play', function() {
+    const videoSpeed = video.playbackRate;
+    const animationDuration = video.duration / videoSpeed;
+    floatingText.style.animationDuration = `${animationDuration}s`;
+});
+
+// Funktion zum manuellen Starten des Videos
+function playVideo() {
+    video.play();
+    document.getElementById('playButton').style.display = 'none';
+}
 /* End Button */
 document.addEventListener('DOMContentLoaded',() =>{
     const openPopupButton = document.querySelector('.openPopup');

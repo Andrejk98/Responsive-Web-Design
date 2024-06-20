@@ -29,6 +29,40 @@ body{
     margin-bottom: 20px;
 }
 
+.floating-text {
+    color: black;
+    position: absolute;
+    z-index: 10;
+    top: -100px; /* Startposition außerhalb des Bildschirms */
+    left: 50%;
+    transform: translateX(-50%);
+    animation: floatIn 10s ease forwards; /* Animation für das Erscheinen */
+}
+
+@keyframes floatIn {
+    0% {
+        top: -50%; /* Startposition außerhalb des Bildschirms */
+        opacity: 0;
+    }
+
+    25%{
+        top: 0%;
+    }
+
+    50%{
+        top: 10%;
+    }
+
+    75%{
+        top: 30%;
+    }
+
+    100% {
+        top: 60%; /* Endposition in der Mitte des Videos */
+        transform: translate(-50%, -50%);
+    }
+}
+
 .center{
     text-align: center;
 }
