@@ -1,3 +1,4 @@
+/* Allgemein */
 body{
     margin: 0 auto;
     background-color: lightgrey;
@@ -5,6 +6,25 @@ body{
     font-size: 1.5rem;
 }
 
+.center{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    font-size: 6rem;
+    
+}
+
+h1, h2, h3{
+    font-family: 'Videogames';
+}
+
+h2{
+    font-size: 3rem;
+}
+
+/* Header */
 .header-bild{
     margin: 0 auto;
     max-height: 100vh;
@@ -38,11 +58,6 @@ body{
     transition: opacity 8s ease-in-out;
 }
 
-
-.center{
-    text-align: center;
-}
-
 #meinVideo{
     max-width: 100vw;
 }
@@ -60,20 +75,7 @@ body{
     cursor: pointer;
 }
 
-h1{
-    text-align: center;
-    font-size: 4rem;
-    
-}
-
-h1, h2, h3{
-    font-family: 'Videogames';
-}
-
-h2{
-    font-size: 3rem;
-}
-
+/* Anordnung */
 .bild-text-box{
     display: flex;
     align-items: center;
@@ -177,7 +179,7 @@ h2{
     line-height: 140%;
 }
 
-/* Controller Bilder */
+/* Spieleabend */
 .spieleabende-box {
     position: relative;
     display: flex;
@@ -211,18 +213,6 @@ h2{
     width: 7vw; /* Größe des Controllers, anpassen nach Bedarf */
     /* rotate: -30deg; */
     animation: moveAndRotateleft 8s infinite;
-}
-
-@keyframes moveAndRotateright {
-    0% {
-        transform: translateX(0) rotate(0deg);
-    }
-    50% {
-        transform: translateX(4vw) rotate(30deg); /* Passe die Werte nach Bedarf an */
-    }
-    100% {
-        transform: translateX(0) rotate(0deg);
-    }
 }
 
 @keyframes moveAndRotateleft {
@@ -280,7 +270,6 @@ h2{
 }
 
 /* Bilder Karussell */
-
 .slideshow-container {
     max-width: 60vw;
     position: relative;
@@ -359,6 +348,7 @@ img {
     to {opacity: 1}
 }
 
+/* Pop-Up */
 .callToAction{
     position: relative;
     text-align: center;
@@ -528,15 +518,6 @@ img {
         box-sizing: border-box; /* Include padding in the element's total width */
     }
 
-    h1{
-        line-height: 120%;
-    }
-
-    h2{
-        line-height: 130%;
-        text-align: center;
-    }
-
     .slideshow-container{
         max-width: 100vw;
     }
@@ -672,17 +653,17 @@ img {
 /* tablet */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     body{
-        font-size: 2rem;
+        font-size: 1.4rem;
     }
 
     h1{
-        font-size: 3.5rem;
+        font-size: 3rem;
         line-height: 120%;
         text-align: center;
     }
 
     h2{
-        font-size: 3rem;
+        font-size: 2.5rem;
         line-height: 130%;
         text-align: center;
     }
@@ -706,6 +687,17 @@ img {
         object-fit: cover; /* Schließt den Container und schneidet überflüssige Teile ab */
         object-position: center; /* Zentriert das Video */
     }
+
+    .floating-text {
+        color: black;
+        position: absolute;
+        z-index: 10;
+        top: 50%; /* Startposition in der Mitte des Videos */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0; /* Unsichtbar zu Beginn */
+        transition: opacity 6s ease-in-out;
+    }
     
     .header-text {
         width: calc(100vw - 30px); /* 100vw minus 10px padding on each side */
@@ -721,17 +713,20 @@ img {
     .bild-text-box{
         display: flex;
         flex-direction: column;
-        width: 100vw;
+        width: 90vw;
+        max-width: 100vw;
         margin: 0 auto;
     }
 
     .bild{
-        width: 100vw;
+        width: 90vw;
     }
 
     .mittelbild{
-        width: 100vw;
+        width: 90vw;
+        max-width: 100vw;
         margin-bottom: 0px;
+        overflow: hidden;
     }
 
     .mitteltext > .mittelbild{
@@ -758,23 +753,28 @@ img {
         box-sizing: border-box; /* Include padding in the element's total width */
     }
 
-    h1{
-        line-height: 120%;
-    }
-
-    h2{
-        line-height: 130%;
-        text-align: center;
-    }
-
     .slideshow-container{
-        max-width: 100vw;
+        max-width: 90vw;
+    }
+
+    .dot {
+        height: 8px;
+        width: 8px;
+    }
+      
+    .active, .dot:hover {
+        background-color: black;
+        transform: scale(1.7);
+    }
+
+    .spieleabende-box{
+        width: 90vw;
     }
 
     .spieleabende-box .bild {
         position: relative;
         z-index: 1;
-        width: 100vw;
+        width: 90vw;
         margin-bottom: 0px;
     }
     
@@ -789,20 +789,9 @@ img {
     }
 
     .spieleabende-box .xbox {
-        top: -10px; /* Abstand von oben, anpassen nach Bedarf */
-        left: 6vw; /* Abstand von links, anpassen nach Bedarf */
-        width: 13vw; /* Größe des Controllers, anpassen nach Bedarf */
-        rotate: 0deg;
-        animation: none;
+        display: none;
     }
     
-    .spieleabende-box .playstation {
-        bottom: -10px; /* Abstand von unten, anpassen nach Bedarf */
-        right: 6vw; /* Abstand von rechts, anpassen nach Bedarf */
-        width: 13vw; /* Größe des Controllers, anpassen nach Bedarf */
-        rotate: 180deg;
-        animation: none;
-    }
 
     .konsolen {
         display: grid;
@@ -817,8 +806,8 @@ img {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 40%;
-        width: 40%;
+        height: 50%;
+        width: 50%;
         margin: 10px;
     }
 
@@ -841,7 +830,58 @@ img {
     }
 
     .openPopup{
+        font-size: 1.1rem;
+    }
+
+    .popup{
+        display: none;
+        position: fixed;
+        top: 20%;
+        left: 0%;
+        width: 100%;
+        max-height: 50%;
+        justify-content: center;
+        align-items: center;
+        z-index: 15;
+        overflow: hidden;
+     }
+      
+    .popup-content{
+        background-color: rgb(187, 187, 187);
+        padding: 10%;
+        border-radius: 10px;
+        text-align: center;
+        width: 100%;
+        position: relative;
+    }
+      
+    .popup-text{
+        font-size: 1.5rem; 
+        text-align: center; 
+        line-height: 140%;
+    }
+
+    .close{
+        position: absolute;
+        top: 5%;
+        right: 2%;
+        font-size: 40px;
+        z-index: 20;
+        cursor: pointer;
+        color: black;
+        font-weight: bolder;
+    }
+    
+    .Repository{
+        font-family: 'Videogames';
+        background-color: #05A0D1;
+        margin: 0 auto;
+        padding: 10px 20px;
+        border-radius: 20px;
         font-size: 1.5rem;
+        color: white;
+        border: none;
+        cursor: pointer;
     }
 
     .prev, .next{
@@ -850,6 +890,7 @@ img {
     
 }
 
+/* Darkmode abfrage */
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #636363;
@@ -877,6 +918,7 @@ img {
     }
 }
 
+/* Schriftarten */
 @font-face {
     font-family: 'Ubuntu';
     src: url(../Schriftart/static/Ubuntu-Regular.ttf);

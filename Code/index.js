@@ -32,6 +32,7 @@ function handleMediaQuery(mediaQuery1, mediaQuery2) {
 document.addEventListener('DOMContentLoaded', function() {
     const boxes = document.querySelectorAll('.box');
     const isTouchDevice = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+    let currentSound = null; // Variable zum Speichern des aktuell spielenden Sounds
 
     boxes.forEach(box => {
         const soundId = box.getAttribute('data-sound');
@@ -39,9 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (isTouchDevice) {
             box.addEventListener('click', function() {
+                if (currentSound && currentSound !== sound) {
+                    currentSound.pause();
+                    currentSound.currentTime = 0;
+                }
                 if (sound) {
                     sound.currentTime = 0; // Rewind to start of audio
                     sound.play();
+                    currentSound = sound; // Set the current sound to the one being played
                 }
             });
         } else {
@@ -61,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 // Definiere die Media Queries, auf die du reagieren möchtest
 const mediaQuery1 = window.matchMedia("(max-width: 720px)");
 const mediaQuery2 = window.matchMedia("(max-width: 1024px)");
