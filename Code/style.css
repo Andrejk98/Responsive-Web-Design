@@ -22,9 +22,7 @@ body{
 
 .header-text{
     font-family: 'Ubuntu';
-    width: calc(100vw - 40px); /* 100vw minus 10px padding on each side */
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 80vw; /* 100vw minus 10px padding on each side */
     line-height: 140%;
     margin-bottom: 20px;
 }
@@ -33,35 +31,13 @@ body{
     color: black;
     position: absolute;
     z-index: 10;
-    top: -100px; /* Startposition außerhalb des Bildschirms */
+    top: 60%; /* Startposition in der Mitte des Videos */
     left: 50%;
-    transform: translateX(-50%);
-    animation: floatIn 10s ease forwards; /* Animation für das Erscheinen */
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Unsichtbar zu Beginn */
+    transition: opacity 8s ease-in-out;
 }
 
-@keyframes floatIn {
-    0% {
-        top: -50%; /* Startposition außerhalb des Bildschirms */
-        opacity: 0;
-    }
-
-    25%{
-        top: 0%;
-    }
-
-    50%{
-        top: 10%;
-    }
-
-    75%{
-        top: 30%;
-    }
-
-    100% {
-        top: 60%; /* Endposition in der Mitte des Videos */
-        transform: translate(-50%, -50%);
-    }
-}
 
 .center{
     text-align: center;
@@ -279,8 +255,13 @@ h2{
     margin: 10px;
 }
 
+.box > img {
+    width: 80%;
+    height: auto;
+}
+
 .box:hover {
-    transform: scale(1.1); /* Vergrößert das Bild um 10% */
+    transform: scale(1.4); /* Vergrößert das Bild um 10% */
 }
 
 .box::after {
@@ -484,6 +465,17 @@ img {
         object-fit: cover; /* Schließt den Container und schneidet überflüssige Teile ab */
         object-position: center; /* Zentriert das Video */
     }
+
+    .floating-text {
+        color: black;
+        position: absolute;
+        z-index: 10;
+        top: 50%; /* Startposition in der Mitte des Videos */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0; /* Unsichtbar zu Beginn */
+        transition: opacity 6s ease-in-out;
+    }
     
     .header-text {
         width: calc(100vw - 30px); /* 100vw minus 10px padding on each side */
@@ -547,6 +539,16 @@ img {
 
     .slideshow-container{
         max-width: 100vw;
+    }
+
+    .dot {
+        height: 8px;
+        width: 8px;
+    }
+      
+    .active, .dot:hover {
+        background-color: black;
+        transform: scale(1.7);
     }
 
     .spieleabende-box .bild {

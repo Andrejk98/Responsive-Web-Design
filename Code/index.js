@@ -142,36 +142,36 @@ document.addEventListener('touchend', function(event) {
 /* Header Bild */
 document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('meinVideo');
+    const floatingText = document.querySelector('.floating-text');
     
     // Überprüfen, ob das Video geladen ist
     video.addEventListener('loadedmetadata', function() {
         video.play();
-        video.playbackRate = 1.5; // Setzt die Wiedergabegeschwindigkeit auf das Doppelte
+        video.playbackRate = 1.6; // Setzt die Wiedergabegeschwindigkeit auf das Doppelte
     });
 
     // Optional: Funktion zum manuellen Starten des Videos über den Button
     function playVideo() {
         video.play();
-        video.playbackRate = 1.5; // Setzt die Wiedergabegeschwindigkeit auf das Doppelte
+        video.playbackRate = 1.6; // Setzt die Wiedergabegeschwindigkeit auf das Doppelte
         document.getElementById('playButton').style.display = 'none';
     }
     
     // Button ist versteckt, da das Video automatisch abspielt
     document.getElementById('playButton').style.display = 'none';
-});
 
-const video = document.getElementById('meinVideo');
-const floatingText = document.querySelector('.floating-text');
-
-// Überwache die Abspielgeschwindigkeit des Videos
-video.addEventListener('play', function() {
-    const videoSpeed = video.playbackRate;
-    const animationDuration = video.duration / videoSpeed;
-    floatingText.style.animationDuration = `${animationDuration}s`;
+    // Überwache die Abspielgeschwindigkeit des Videos und die Abspielposition
+    video.addEventListener('timeupdate', function() {
+        const halfwayPoint = video.duration / 2;
+        if (video.currentTime >= halfwayPoint) {
+            floatingText.style.opacity = 1; // Text sichtbar machen
+        }
+    });
 });
 
 // Funktion zum manuellen Starten des Videos
 function playVideo() {
+    const video = document.getElementById('meinVideo');
     video.play();
     document.getElementById('playButton').style.display = 'none';
 }
