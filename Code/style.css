@@ -24,6 +24,10 @@ h2{
     font-size: 3rem;
 }
 
+h4{
+    font-family: 'Ubuntu';
+}
+
 /* Header */
 .header-bild{
     margin: 0 auto;
@@ -41,10 +45,36 @@ h2{
 }
 
 .header-text{
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+table {
+    width: 80vw; /* Das gesamte Viewport-Breiteneinnehmen */
+    table-layout: fixed; /* Jede Zelle hat eine feste Breite */
+    border-collapse: collapse; /* Zusammenbruch der Zellenränder */
+}
+
+td {
+    width: 33.33%; /* Jede Zelle nimmt 33.33% des Viewports ein */
+    padding: 20px; /* Innenabstand für besseren Textabstand */
+    vertical-align: top; /* Vertikale Ausrichtung des Inhalts oben */
+    box-sizing: border-box; /* Padding und Border werden zur Gesamtbreite und -höhe der Elemente hinzugefügt */
+    text-align: left; /* Text links ausrichten */
     font-family: 'Ubuntu';
-    width: 80vw; /* 100vw minus 10px padding on each side */
-    line-height: 140%;
-    margin-bottom: 20px;
+}
+
+.entspannen2,
+.spaß2,
+.freundschaft2{
+    display: block;
+    margin: 0 auto;
+}
+
+.entspannen,
+.spaß,
+.freundschaft{
+    display: none;
 }
 
 .floating-text {
@@ -80,8 +110,7 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 8%;
 }
 
 .bild-box{
@@ -90,13 +119,15 @@ h2{
     margin: 0 auto;
     align-content: center;
     max-width: 100vw;
-    margin-bottom: 20px;
+    margin-top: 8%;
 }
 
 .text-box{
     display: flex;
+    flex-direction: column;
     align-items: center; /* Horizontal zentrierte Ausrichtung */
     justify-content: center;
+    margin-top: 8%;
 }
 
 .polaroid {
@@ -123,7 +154,6 @@ h2{
     width: 100%;
     display: inline-block;
     margin-top: 2rem;
-    filter: grayscale(100%);
 }
 
 .item:hover {
@@ -155,21 +185,6 @@ h2{
     width: 50vw;
 }
 
-.mittelbild{
-    /* padding: 50px; */
-    /* margin: 20px 5px 20px 5px; */
-    width: 40vw;
-    margin: 0 auto;
-}
-
-.mitteltext{
-    font-family: 'Ubuntu';
-    width: 10vw;
-    padding: 50px;
-    margin: 20px 5px 20px 5px;
-    line-height: 140%;
-}
-
 .text{
     font-family: 'Ubuntu';
     /* text-align: center; */
@@ -185,6 +200,7 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 8%;
 }
 
 .spieleabende-box .bild {
@@ -205,26 +221,8 @@ h2{
     line-height: 140%;
 }
 
-.spieleabende-box .xbox {
-    position: absolute;
-    z-index: 0;
-    top: 10%; /* Abstand von oben, anpassen nach Bedarf */
-    left: 11%; /* Abstand von links, anpassen nach Bedarf */
-    width: 7vw; /* Größe des Controllers, anpassen nach Bedarf */
-    /* rotate: -30deg; */
-    animation: moveAndRotateleft 8s infinite;
-}
-
-@keyframes moveAndRotateleft {
-    0% {
-        transform: translateX(0) rotate(0deg);
-    }
-    50% {
-        transform: translateX(-4vw) rotate(-30deg); /* Passe die Werte nach Bedarf an */
-    }
-    100% {
-        transform: translateX(0) rotate(0deg);
-    }
+.margin{
+    margin-top: 8%;
 }
 
 .konsolen {
@@ -274,6 +272,7 @@ h2{
     max-width: 60vw;
     position: relative;
     margin: auto;
+    margin-top: 8%;
 }
   
 .mySlides {
@@ -353,6 +352,8 @@ img {
     position: relative;
     text-align: center;
     padding: 50px;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .openPopup{
@@ -373,7 +374,7 @@ img {
     top: 20%;
     left: 15%;
     width: 70%;
-    max-height: 50%;
+    max-height: 60%;
     justify-content: center;
     align-items: center;
     z-index: 15;
@@ -418,6 +419,60 @@ img {
     cursor: pointer;
 }
 
+.footer {
+    background-color: #333;
+    font-family: 'Ubuntu';
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    margin: 0;
+    color: #ddd;
+}
+
+
+.footer-section .social-icon {
+    margin: 0 20px;
+    color: #ddd;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.footer-section .social-icon:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    color: #aaa;
+}
+
+
 /* Smartphone */
 @media only screen and (max-width: 720px){
     body{
@@ -425,7 +480,7 @@ img {
     }
 
     h1{
-        font-size: 3rem;
+        font-size: 3.5rem;
         line-height: 120%;
         text-align: center;
     }
@@ -442,7 +497,7 @@ img {
 
     .header-bild {
         margin: 0 auto;
-        height: 80vh;
+        height: 90vh;
         max-width: none;
         position: relative;
         overflow: hidden;
@@ -468,244 +523,20 @@ img {
     }
     
     .header-text {
-        width: calc(100vw - 30px); /* 100vw minus 10px padding on each side */
-        padding-left: 15px;
-        padding-right: 15px;
-        line-height: 130%;
-    }
-    
-    #meinVideo {
-        height: 80vh;
+        margin-top: 5%;
     }
 
-    .bild-text-box{
-        display: flex;
-        flex-direction: column;
-        width: 100vw;
-        margin: 0 auto;
-    }
-
-    .bild{
-        width: 100vw;
-    }
-
-    .mittelbild{
-        width: 100vw;
-        margin-bottom: 0px;
-    }
-
-    .mitteltext > .mittelbild{
-        margin-top: 0px;
-    }
-
-    .bild-box{
-        flex-direction: column;
-    }
-
-    .mitteltext{
-        width: calc(100vw - 20px); /* 100vw minus 10px padding on each side */
-        margin-top: 0px;
-        margin-bottom: 0px;
-        line-height: 130%;
-        padding: 0 10px; /* 10px padding on left and right */
-        box-sizing: border-box; /* Include padding in the element's total width */
-    }
-
-    .text {
-        width: calc(100vw - 20px); /* 100vw minus 10px padding on each side */
-        line-height: 130%;
-        padding: 0 10px; /* 10px padding on left and right */
-        box-sizing: border-box; /* Include padding in the element's total width */
-    }
-
-    .slideshow-container{
-        max-width: 100vw;
-    }
-
-    .dot {
-        height: 8px;
-        width: 8px;
-    }
-      
-    .active, .dot:hover {
-        background-color: black;
-        transform: scale(1.7);
-    }
-
-    .spieleabende-box .bild {
-        position: relative;
-        z-index: 1;
-        width: 100vw;
-        margin-bottom: 0px;
-    }
-    
-    .spieleabende-box .text {
-        position: relative;
-        z-index: 1;
-        width: calc(100vw - 20px); /* 100vw minus 10px padding on each side */
-        margin-top: 0px;
-        line-height: 130%;
-        padding: 0px 10px;
-        box-sizing: border-box; /* Include padding in the element's total width */
-    }
-
-    .spieleabende-box .xbox {
-        display: none;
-    }
-    
-
-    .konsolen {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-        align-items: center;
-        max-width: 100vw;
-        height: auto; 
-    }
-    
-    .box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50%;
-        width: 50%;
-        margin: 10px;
-    }
-
-    .box > img{
+    table, tr, td {
+        display: block;
         width: 100%;
-        height: auto;
-    }
-
-    .play-button {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 10px 20px;
-        background-color: #05A0D1;
-        color: white;
-        border: none;
-        border-radius: 1vw;
-        cursor: pointer;
-    }
-
-    .openPopup{
-        font-size: 1.1rem;
-    }
-
-    .popup{
-        display: none;
-        position: fixed;
-        top: 20%;
-        left: 0%;
-        width: 100%;
-        max-height: 50%;
-        justify-content: center;
-        align-items: center;
-        z-index: 15;
-        overflow: hidden;
-     }
-      
-    .popup-content{
-        background-color: rgb(187, 187, 187);
-        padding: 10%;
-        border-radius: 10px;
-        text-align: center;
-        width: 100%;
-        position: relative;
-    }
-      
-    .popup-text{
-        font-size: 1.5rem; 
-        text-align: center; 
-        line-height: 140%;
-    }
-
-    .close{
-        position: absolute;
-        top: 5%;
-        right: 2%;
-        font-size: 40px;
-        z-index: 20;
-        cursor: pointer;
-        color: black;
-        font-weight: bolder;
-    }
-    
-    .Repository{
-        font-family: 'Videogames';
-        background-color: #05A0D1;
-        margin: 0 auto;
-        padding: 10px 20px;
-        border-radius: 20px;
-        font-size: 1.5rem;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
-
-    .prev, .next{
-        display: none;
-    }
-    
-}
-/* tablet */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    body{
         font-size: 1.4rem;
     }
-
-    h1{
-        font-size: 3rem;
-        line-height: 120%;
-        text-align: center;
-    }
-
-    h2{
-        font-size: 2.5rem;
-        line-height: 130%;
-        text-align: center;
-    }
-
-    .item{
-        filter: none;
-    }
-
-    .header-bild {
-        margin: 0 auto;
-        height: 80vh;
-        max-width: none;
-        position: relative;
-        overflow: hidden;
-    }
     
-    .header-bild video {
-        width: 100%; /* Fülle die Breite des Containers */
-        height: 100%; /* Fülle die Höhe des Containers */
-        max-height: 100vh;
-        object-fit: cover; /* Schließt den Container und schneidet überflüssige Teile ab */
-        object-position: center; /* Zentriert das Video */
+    td {
+        width: 100%; 
+        padding: 30px 18px 30px 18px; 
     }
 
-    .floating-text {
-        color: black;
-        position: absolute;
-        z-index: 10;
-        top: 50%; /* Startposition in der Mitte des Videos */
-        left: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 0; /* Unsichtbar zu Beginn */
-        transition: opacity 6s ease-in-out;
-    }
-    
-    .header-text {
-        width: calc(100vw - 30px); /* 100vw minus 10px padding on each side */
-        padding-left: 15px;
-        padding-right: 15px;
-        line-height: 130%;
-    }
-    
     #meinVideo {
         height: 80vh;
     }
@@ -713,37 +544,17 @@ img {
     .bild-text-box{
         display: flex;
         flex-direction: column;
-        width: 90vw;
-        max-width: 100vw;
+        width: 100vw;
         margin: 0 auto;
+        margin-top: 18%;
     }
 
     .bild{
-        width: 90vw;
-    }
-
-    .mittelbild{
-        width: 90vw;
-        max-width: 100vw;
-        margin-bottom: 0px;
-        overflow: hidden;
-    }
-
-    .mitteltext > .mittelbild{
-        margin-top: 0px;
+        width: 100vw;
     }
 
     .bild-box{
         flex-direction: column;
-    }
-
-    .mitteltext{
-        width: calc(100vw - 20px); /* 100vw minus 10px padding on each side */
-        margin-top: 0px;
-        margin-bottom: 0px;
-        line-height: 130%;
-        padding: 0 10px; /* 10px padding on left and right */
-        box-sizing: border-box; /* Include padding in the element's total width */
     }
 
     .text {
@@ -754,7 +565,8 @@ img {
     }
 
     .slideshow-container{
-        max-width: 90vw;
+        max-width: 100vw;
+        margin-top: 15%;
     }
 
     .dot {
@@ -768,13 +580,13 @@ img {
     }
 
     .spieleabende-box{
-        width: 90vw;
+        margin-top: 18%;
     }
 
     .spieleabende-box .bild {
         position: relative;
         z-index: 1;
-        width: 90vw;
+        width: 100vw;
         margin-bottom: 0px;
     }
     
@@ -792,6 +604,9 @@ img {
         display: none;
     }
     
+    .margin{
+        margin-top: 18%;
+    }
 
     .konsolen {
         display: grid;
@@ -831,6 +646,7 @@ img {
 
     .openPopup{
         font-size: 1.1rem;
+        margin-top: 15%;
     }
 
     .popup{
@@ -887,6 +703,261 @@ img {
     .prev, .next{
         display: none;
     }
+
+    .footer-container {
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .footer-section {
+        margin-bottom: 20px;
+        margin: 0 auto;
+    }
+}
+/* tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    body{
+        font-size: 2rem;
+    }
+
+    h1{
+        font-size: 5rem;
+        line-height: 120%;
+        text-align: center;
+    }
+
+    h2{
+        font-size: 4rem;
+        line-height: 130%;
+        text-align: center;
+    }
+
+    .item{
+        filter: none;
+    }
+
+    .header-bild {
+        margin: 0 auto;
+        height: 90vh;
+        max-width: none;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .header-bild video {
+        width: 100%; /* Fülle die Breite des Containers */
+        height: 100%; /* Fülle die Höhe des Containers */
+        max-height: 100vh;
+        object-fit: cover; /* Schließt den Container und schneidet überflüssige Teile ab */
+        object-position: center; /* Zentriert das Video */
+    }
+
+    .floating-text {
+        color: black;
+        position: absolute;
+        z-index: 10;
+        top: 50%; /* Startposition in der Mitte des Videos */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0; /* Unsichtbar zu Beginn */
+        transition: opacity 6s ease-in-out;
+    }
+    
+    .header-text {
+        margin-top: 5%;
+    }
+
+    table, tr, td {
+        display: block;
+        width: 100%;
+        font-size: 2rem;
+    }
+    
+    td {
+        width: 100%; 
+        padding: 30px 18px 30px 18px; 
+    }
+
+    #meinVideo {
+        height: 80vh;
+    }
+
+    .bild-text-box{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        margin: 0 auto;
+        margin-top: 18%;
+    }
+
+    .bild{
+        width: 100vw;
+    }
+
+    .bild-box{
+        flex-direction: column;
+    }
+
+    .text {
+        width: calc(100vw - 20px); /* 100vw minus 10px padding on each side */
+        line-height: 130%;
+        padding: 0 10px; /* 10px padding on left and right */
+        box-sizing: border-box; /* Include padding in the element's total width */
+    }
+
+    .slideshow-container{
+        max-width: 100vw;
+        margin-top: 15%;
+    }
+
+    .dot {
+        height: 8px;
+        width: 8px;
+    }
+      
+    .active, .dot:hover {
+        background-color: black;
+        transform: scale(1.7);
+    }
+
+    .spieleabende-box{
+        margin-top: 18%;
+    }
+
+    .spieleabende-box .bild {
+        position: relative;
+        z-index: 1;
+        width: 100vw;
+        margin-bottom: 0px;
+    }
+    
+    .spieleabende-box .text {
+        position: relative;
+        z-index: 1;
+        width: calc(100vw - 20px); /* 100vw minus 10px padding on each side */
+        margin-top: 0px;
+        line-height: 130%;
+        padding: 0px 10px;
+        box-sizing: border-box; /* Include padding in the element's total width */
+    }
+
+    .spieleabende-box .xbox {
+        display: none;
+    }
+    
+    .margin{
+        margin-top: 18%;
+    }
+
+    .konsolen {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+        max-width: 100vw;
+        height: auto; 
+    }
+    
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        width: 50%;
+        margin: 10px;
+    }
+
+    .box > img{
+        width: 100%;
+        height: auto;
+    }
+
+    .play-button {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        background-color: #05A0D1;
+        color: white;
+        border: none;
+        border-radius: 1vw;
+        cursor: pointer;
+    }
+
+    .openPopup{
+        font-size: 2.5rem;
+        margin-top: 15%;
+    }
+
+    .popup{
+        display: none;
+        position: fixed;
+        top: 20%;
+        left: 0%;
+        width: 100%;
+        max-height: 50%;
+        justify-content: center;
+        align-items: center;
+        z-index: 15;
+        overflow: hidden;
+     }
+      
+    .popup-content{
+        background-color: rgb(187, 187, 187);
+        padding: 10%;
+        border-radius: 10px;
+        text-align: center;
+        width: 100%;
+        position: relative;
+    }
+      
+    .popup-text{
+        font-size: 1.5rem; 
+        text-align: center; 
+        line-height: 140%;
+    }
+
+    .close{
+        position: absolute;
+        top: 5%;
+        right: 2%;
+        font-size: 40px;
+        z-index: 20;
+        cursor: pointer;
+        color: black;
+        font-weight: bolder;
+    }
+    
+    .Repository{
+        font-family: 'Videogames';
+        background-color: #05A0D1;
+        margin: 0 auto;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 1.5rem;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .prev, .next{
+        display: none;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .footer-section {
+        margin-bottom: 20px;
+        margin: 0 auto;
+    }
     
 }
 
@@ -895,6 +966,19 @@ img {
     body {
         background-color: #636363;
         color: white;
+    }
+
+    .entspannen,
+    .spaß,
+    .freundschaft{
+        display: block;
+        margin: 0 auto;
+    }
+
+    .entspannen2,
+    .spaß2,
+    .freundschaft2{
+        display: none;
     }
 
     .text{

@@ -1,6 +1,7 @@
 .ba-slider {
     position: relative;
     overflow: hidden;
+    margin-top: 8%;
 }
  
 .ba-slider img {
@@ -61,4 +62,16 @@
     margin: -24px 0 0 -24px;
     line-height:50px;
     font-size:28px;
+}
+
+@media (max-width: 720px) {
+    .ba-slider{
+        margin-top: 15%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .ba-slider{
+        margin-top: 15%;
+    }
 }
