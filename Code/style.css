@@ -227,7 +227,7 @@ td {
 
 .konsolen {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     align-items: center;
     max-width: 100vw;
@@ -238,8 +238,8 @@ td {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20%;
-    width: 20%;
+    height: 50%;
+    width: 50%;
     margin: 10px;
 }
 
@@ -766,7 +766,7 @@ img {
     }
     
     .header-text {
-        margin-top: 5%;
+        margin-top: -2%;
     }
 
     table, tr, td {
