@@ -85,7 +85,7 @@ td {
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0; /* Unsichtbar zu Beginn */
-    transition: opacity 8s ease-in-out;
+    transition: opacity 6s ease-in-out;
 }
 
 #meinVideo{

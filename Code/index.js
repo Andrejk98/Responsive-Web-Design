@@ -154,13 +154,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Überprüfen, ob das Video geladen ist
     video.addEventListener('loadedmetadata', function() {
         video.play();
-        video.playbackRate = 1.6; // Setzt die Wiedergabegeschwindigkeit auf das Doppelte
+        video.playbackRate = 1.8; // Setzt die Wiedergabegeschwindigkeit auf das Doppelte
     });
 
     // Optional: Funktion zum manuellen Starten des Videos über den Button
     function playVideo() {
         video.play();
-        video.playbackRate = 1.6; // Setzt die Wiedergabegeschwindigkeit auf das Doppelte
+        video.playbackRate = 1.8; // Setzt die Wiedergabegeschwindigkeit auf das Doppelte
         document.getElementById('playButton').style.display = 'none';
     }
     
