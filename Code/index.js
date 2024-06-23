@@ -31,40 +31,30 @@ function handleMediaQuery(mediaQuery1, mediaQuery2) {
 /* hovern von controllern */
 document.addEventListener('DOMContentLoaded', function() {
     const boxes = document.querySelectorAll('.box');
-    const isTouchDevice = 'ontouchstart' in window || navigator.msMaxTouchPoints;
     let currentSound = null; // Variable zum Speichern des aktuell spielenden Sounds
 
     boxes.forEach(box => {
         const soundId = box.getAttribute('data-sound');
         const sound = document.getElementById(soundId);
 
-        if (isTouchDevice) {
-            box.addEventListener('click', function() {
-                if (currentSound && currentSound !== sound) {
-                    currentSound.pause();
-                    currentSound.currentTime = 0;
-                }
-                if (sound) {
-                    sound.currentTime = 0; // Rewind to start of audio
-                    sound.play();
-                    currentSound = sound; // Set the current sound to the one being played
-                }
-            });
-        } else {
-            box.addEventListener('mouseenter', function() {
-                if (sound) {
-                    sound.currentTime = 0; // Rewind to start of audio
-                    sound.play();
-                }
-            });
-
-            box.addEventListener('mouseleave', function() {
-                if (sound) {
-                    sound.pause();
-                    sound.currentTime = 0; // Zurücksetzen auf den Anfang des Audios für das nächste Mal
-                }
-            });
-        }
+        box.addEventListener('click', function() {
+            // Falls ein anderes Audio gerade spielt, pausieren und zurücksetzen
+            if (currentSound && currentSound !== sound) {
+                currentSound.pause();
+                currentSound.currentTime = 0;
+            }
+            // Falls das gleiche Audio geklickt wird, stoppen und zurücksetzen
+            if (currentSound === sound) {
+                sound.pause();
+                sound.currentTime = 0;
+                currentSound = null;
+            } else {
+                // Starte das neue Audio und setze es als aktuell spielend
+                sound.currentTime = 0; // Zurückspulen zum Anfang des Audios
+                sound.play();
+                currentSound = sound;
+            }
+        });
     });
 });
 
