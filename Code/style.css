@@ -62,6 +62,7 @@ td {
     box-sizing: border-box; /* Padding und Border werden zur Gesamtbreite und -höhe der Elemente hinzugefügt */
     text-align: left; /* Text links ausrichten */
     font-family: 'Ubuntu';
+    line-height: 140%;
 }
 
 .entspannen2,
